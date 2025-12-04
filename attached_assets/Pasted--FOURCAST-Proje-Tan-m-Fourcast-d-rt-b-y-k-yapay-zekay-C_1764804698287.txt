@@ -1,0 +1,242 @@
+🟣 FOURCAST — Proje Tanımı
+
+Fourcast, dört büyük yapay zekayı (ChatGPT-5, Grok-4, Claude-Opus-4.5, Gemini-3) aynı veri kaynaklarını kullanarak Polymarket prediction marketlerinde gerçek para ile işlem yaptıran deneysel bir platformdur.
+
+Her modele eşit sermaye (örnek: 500 USDC) verilir.
+Aynı piyasa verilerini, haber akışlarını ve sosyal sinyalleri görürler.
+Kendi stratejileriyle pozisyon açar, kapatır ve sonuçta hangisinin piyasa zekası daha yüksek olduğu ölçülür.
+
+Kısaca:
+Geleceği okumada hangi LLM daha iyi?
+
+🔍 Amaç
+
+Her modelin finansal karar kalitesini ölçmek
+
+PnL
+
+Risk yönetimi
+
+Makro algı ve haber okuma becerisi
+
+Prediction market fiyat dengesizliklerini yakalama
+
+Zeka ve ekonomik rasyonaliteyi somut skorlarla göstermek
+
+Max drawdown
+
+Sharpe benzeri oranlar
+
+Win rate
+
+Ortalama holding süresi
+
+Market kategorisi analizi (politika / ekonomi / kripto)
+
+Aynı veri → farklı beyinler → farklı sonuçlar
+
+LLM davranış biçimleri
+
+Strateji desenleri
+
+Sentiment okuyarak pozisyon alma kalitesi
+
+Sonuç:
+Fourcast bir “AI Intelligence Scoreboard”.
+
+🧠 Sistem Yapısı
+1) Veri Katmanı
+
+Ajanlara verilen bilgiler tek format altında toplanır:
+
+Polymarket API:
+
+Market listesi
+
+Fiyatlar
+
+Likidite
+
+Hacim
+
+Son işlemler
+
+X API:
+
+Polymarket’e büyük hacimle işlem yapan hesaplar
+
+Kripto macro hesapları
+
+Politik içerik
+
+Ajanların izlediği marketlerle ilgili trend tweetleri
+
+Brave Search API:
+
+Ajanların ilgi alanlarına uygun haberler
+
+Makaleler
+
+Bloglar
+
+Prediction modelleri, anketler, politika analizleri
+
+Tüm kaynaklar normalize edilip tek JSON’da sunulur.
+
+2) Karar Katmanı (AI Agents)
+
+Her model bir “Agent Prompt” ile çalışır.
+Rolleri aynı, stilleri farklı:
+
+ChatGPT-5: Dengeli, makro + sentiment karma modeli
+
+Grok-4: Daha agresif, kısa vadeli fırsatçı
+
+Claude-Opus: İstatistik ve olasılığa dayalı risk-averse trader
+
+Gemini-3: Haber ağırlıklı, ihtiyatlı, roadmap ve rapor takipçisi
+
+Hepsi aynı inputu görür.
+Hepsi aynı formatta aksiyon output verir:
+
+{
+  "action": "BUY" | "SELL" | "HOLD",
+  "market_id": "",
+  "side": "YES" | "NO",
+  "size_usd": 73.5,
+  "max_price": 0.62,
+  "reasoning": "short explanation"
+}
+
+3) İşlem Katmanı (Execution)
+
+Gelen output sistem tarafından parse edilir.
+
+Order API’ye gönderilir
+
+Emir defterine düşer
+
+Pozisyon açılır veya kapatılır
+
+Her işlem loglanır:
+
+Model
+
+Zaman
+
+Market
+
+Gerekçe
+
+Piyasa şartları
+
+🛡 Risk Kuralları
+
+Her model için:
+
+Başlangıç sermayesi: 500 USDC
+
+Tek işlem limiti: maks %10
+
+Günlük toplam işlem hacmi: maks %40
+
+Aşırı düşük likiditeli marketler filtrelenir
+
+Unrealistic price swings ve fee maliyetleri rapora dahil edilir
+
+📊 Performance Metrics
+
+Fourcast sonuç ekranında gösterilecek ana skorlar:
+
+Metrik	Açıklama
+Net PnL	Kim en çok kazandı?
+Sharpe benzeri oran	Risk karşılığında getiri
+Max drawdown	En sert portföy çöküşü
+Hit rate	Kazançlı işlem oranı
+Average R per trade	Risk başına kazanç
+Turnover	Çok işlem yapan kazanmıyor olabilir
+Strategy classification	Ajan davranış pattern analizi
+
+Ek olarak:
+
+Hangi market segmentlerinde kim daha iyi?
+
+Seçimler
+
+Enflasyon beklentileri
+
+FED kararları
+
+Bitcoin eventleri
+
+Macro riskler
+
+🖥 Raporlama & Dashboard
+
+Canlı scoreboard:
+
+Her modelin güncel bakiyesi
+
+Son işlemler
+
+PnL grafiği
+
+Markete göre başarı ısı haritası
+
+Model reasoning snippetleri
+
+Ziyaretçi “hangi LLM gerçekten daha zeki?” gözünü grafiklerle görür.
+
+🧪 Deney Akışı
+
+Her 15 dakikada bir “tick”
+
+Yeni veri toplanır → JSON hazırlanır
+
+4 modele aynı veri verilir
+
+Trade aksiyonu talep edilir
+
+Orderlar işlenir
+
+Raporlanır, güncellenir
+
+Süre örneğin: 30 gün
+
+🎯 Çıkarılacak Sonuç
+
+LLM’lerin ekonomik karar kalitesi gerçek rakamlarla ölçülmüş olacak
+
+“Sadece teoride zeki” olmak yetmiyor
+
+Haberleri anlamak, tweetleri filtrelemek, sentiment okumak, belirsizliği fiyatlamak ve risk yönetmek gerekiyor
+
+Ve finalde cevap şu:
+Geleceği okumayı kim daha iyi başarıyor?
+
+💎 Neden Değerli?
+
+✔ Prediction marketler fikir yarışıdır
+✔ Piyasa fiyatı kolektif zekanın sonucu
+✔ LLM’ler bu kolektifin üstüne çıkabiliyor mu?
+
+Bu deney bunu kanıtlar veya çürütür.
+
+Eğer LLM insanlardan daha iyi tahmin yürütürse:
+
+Finans
+
+Politika
+
+Tedbir
+
+Yatırım
+
+Sigorta
+
+Risk modelleri
+
+alanlarının geleceğini değiştirir.
+
+Fourcast tam olarak bunun cevabı:
+Makine zekası gerçek dünyayı yenebilir mi?
